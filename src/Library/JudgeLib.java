@@ -25,7 +25,7 @@ public class JudgeLib implements Library{
 		while(scJudgeGood.hasNext()){
 			wordG = scJudgeGood.next();
 			wordG.trim();
-			wordG = word.toUpperCase();
+			wordG = wordG.toUpperCase();
 			judgeDicGood.add(wordG);
 		}
 		scJudgeGood.close();
@@ -35,7 +35,7 @@ public class JudgeLib implements Library{
 		while(scJudgeBad.hasNext()){
 			wordB = scJudgeGood.next();
 			wordB.trim();
-			wordB = word.toUpperCase();
+			wordB = wordB.toUpperCase();
 			judgeDicBad.add(wordB);
 		}
 		scJudgeBad.close();
