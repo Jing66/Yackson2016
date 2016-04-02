@@ -57,10 +57,16 @@ public class JudgeLib implements Library{
 			check=check.toUpperCase();
 		
 			//if word maps to one in hashtable : check
-			if (judgeDicGood.contains(check))  pNode.setJudgement(Judgement.GOOD);
-			else if (judgeDicBad.contains(check)) pNode.setJudgement(Judgement.BAD);
+			if (judgeDicGood.contains(check)) {
+				pNode.setJudgement(Judgement.GOOD);
+				return;
+			}
+			else if (judgeDicBad.contains(check)) {
+				pNode.setJudgement(Judgement.BAD);
+				return;
+			}
 			else continue;
 		}
-			
+	
 	}
 }
