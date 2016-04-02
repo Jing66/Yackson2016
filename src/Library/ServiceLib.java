@@ -20,19 +20,20 @@ public class ServiceLib extends Library implements judgement{
 			serv = scServe.next();
 			serv = serv.toUpperCase();
 			serviceDic.put(serv.hashCode(), 1);
-			serviceDic.put(serv.hashCode(), 1);
+			
 		}
 		
 		scServe.close();
 	}
 	
-	//use rate() in library
+		/*get the judgement of one aspect in a sentence
+		 * modify the judgment attribute of node and return it*/
 		@Override
 		public Judgement rate(){
 			super.rate();
 		}
 		
-		/*judge if a node(comment) belongs to food aspect,
+		/*judge if a node(comment) belongs to service category,
 		 *sets its NodeType attribute and return boolean*/
 		public boolean isService(){
 			return super.searchLib(serviceDic);
